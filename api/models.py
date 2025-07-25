@@ -1,5 +1,5 @@
 from django.db import models
-
+import datetime
 # Create your models here.
 
 
@@ -18,5 +18,17 @@ class Company(models.Model):
     isActive=models.BooleanField(default=True)
     
 
-
-
+class Employee(models.Model):
+    name=models.CharField(max_length=100)
+    email=models.EmailField(max_length=100)
+    address=models.CharField(max_length=200)
+    phone=models.CharField(max_length=10)
+    position=models.CharField(max_length=50,choices=(('worker','worker'),
+                                                     ('intern','intern'),
+                                                     ('manager','manager'),
+                                                     ('other','other')                                                    
+                                                     ))
+    about=models.TextField(max_length=200)
+    added_date=models.DateField(default=datetime.datetime.now)
+    
+    company=models.ForeignKey(Company,on_delete=models.CASCADE)
