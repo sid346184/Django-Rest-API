@@ -3,8 +3,8 @@ from api.models import Company
 
 class CompanySerializer(serializers.HyperlinkedModelSerializer):
     class Meta:
-        model:Company
-        fields:"__all__"
+        model = Company
+        fields = '__all__'
 
 
 
