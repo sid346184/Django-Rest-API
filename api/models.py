@@ -29,6 +29,6 @@ class Employee(models.Model):
                                                      ('other','other')                                                    
                                                      ))
     about=models.TextField(max_length=200)
-    added_date=models.DateField(default=datetime.datetime.now)
+    added_date=models.DateTimeField(default=datetime.datetime.now)
     
     company=models.ForeignKey(Company,on_delete=models.CASCADE)
