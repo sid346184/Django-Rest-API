@@ -29,7 +29,7 @@ SECRET_KEY = 'django-insecure-p&z#s!z2tzvr4*r&o&0p!p9xlq3!jx04uum@r=2y1#f=!86g^k
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['0.0.0.0','127.0.0.1','localhost']
+ALLOWED_HOSTS = ['https://django-rest-api-yh3v.onrender.com','0.0.0.0','127.0.0.1','localhost']
 
 
 # Application definition
