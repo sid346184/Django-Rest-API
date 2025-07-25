@@ -16,6 +16,9 @@ class Company(models.Model):
 
     added_date=models.DateTimeField(auto_now=True)
     isActive=models.BooleanField(default=True)
+
+    def __str__(self):
+        return self.name
     
 
 class Employee(models.Model):
